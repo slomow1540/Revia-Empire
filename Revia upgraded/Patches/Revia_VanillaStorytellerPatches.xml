@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	
+	<!-- =========== Storyteller Forced Quests =========== -->
+
+	 <Operation Class="PatchOperationAdd">
+		 <success>Always</success> 
+		<xpath>/Defs/StorytellerDef[@Name = "BaseStoryteller"]/comps</xpath>
+		<value>
+			<li Class="StorytellerCompProperties_SingleOnceFixed">
+				<fireAfterDaysPassed>5</fireAfterDaysPassed>
+				<incident MayRequire="Ludeon.RimWorld.Royalty">GiveQuest_Intro_Revia</incident>
+				<allowedTargetTags>
+					<li>World</li>
+				</allowedTargetTags>
+				<enableIfAnyModActive>
+					<li>Ludeon.RimWorld.Royalty</li>
+				</enableIfAnyModActive>
+			</li>			
+		</value>
+	</Operation>
+	
+
+	
+</Patch>
+

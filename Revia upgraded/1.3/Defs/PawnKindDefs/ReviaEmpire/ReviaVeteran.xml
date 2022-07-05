@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>RE_ReviaRaceVeteran</defName>
+    <nameMakerFemale>NamerPersonReviaEmpire</nameMakerFemale>
+    <label>Revia Veteran</label>
+    <royalTitleChance>0.4</royalTitleChance>
+    <titleSelectOne>
+      <li>Revia_One</li>
+      <li>Revia_Two</li>
+    </titleSelectOne>
+    <defaultFactionType>ReviaEmpireFaction</defaultFactionType>
+    <race>ReviaRaceAlien</race>
+    <combatPower>110</combatPower>
+    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
+    <itemQuality>Excellent</itemQuality>
+    <apparelTags>
+      <li>SpacerMilitary</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_ArmorCataphract</li>
+      <li>Apparel_ArmorHelmetCataphract</li>
+      <li>VAEA_Apparel_RangedShieldBelt</li>
+      <li>VWE_Apparel_Exoframe</li>
+      <li>Apparel_CollarShirt</li>
+    </apparelRequired>
+    <apparelMoney>12000~18000</apparelMoney>
+    <apparelColor>(200,0,0)</apparelColor>
+    <biocodeWeaponChance>0.8</biocodeWeaponChance>
+    <weaponTags>
+      <li>SpacerGun</li>
+      <li>ReviaEmpireHeavy</li>
+    </weaponTags>
+    <initialWillRange>8~14</initialWillRange>
+    <initialResistanceRange>12~18</initialResistanceRange>
+    <weaponMoney>99999~99999</weaponMoney>
+    <techHediffsChance>0.5</techHediffsChance>
+    <techHediffsMoney>3000~5000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>8~12</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>5~10</range>
+      </li>
+    </skills>
+    <isFighter>true</isFighter>
+    <invNutrition>5</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>40</choiceChance>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>4~5</countRange>
+        </li>
+      </subOptionsChooseOne>
+
+      <subOptionsTakeAll>
+        <li>
+          <thingDef>RE_ScarleferimInjector</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsTakeAll>
+
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

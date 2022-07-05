@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>FS.ReviaRace</li>
+    </mods> 	
+
+	
+	<match Class="PatchOperationSequence">
+
+
+	<operations>
+	
+
+
+		<li Class="PatchOperationAdd">
+	<xpath>Defs/MiscItemDefs[defName = "ReviaRaceBloodstone"]/statBases</xpath>
+	<value>
+		<RoyalFavorValue>0.2</RoyalFavorValue>
+	</value>
+	</li>	
+	
+	
+
+	</operations>
+	</match>
+	
+	
+  </Operation> 
+</Patch>

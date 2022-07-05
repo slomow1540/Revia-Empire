@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================= Permits from Revia titles ============================= -->
+
+  <RoyalTitlePermitDef>
+    <defName>TradeSettlement</defName>
+    <label>trade with settlements</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>TradeOrbital</defName>
+    <label>trade with orbital traders</label>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+    <defName>TradeCaravan</defName>
+    <label>trade with caravans</label>
+  </RoyalTitlePermitDef>
+
+
+  <!-- ============================= Faction permits ============================= -->
+
+  <!-- Econ -->
+
+  <RoyalTitlePermitDef Name="DropResourcesBase" Abstract="True">
+		<workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>24</cooldownDays>
+		<usableOnWorldMap>true</usableOnWorldMap>
+		<royalAid>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+  </RoyalTitlePermitDef>
+
+	<!-- techprint from mistress title -->
+
+	<RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>Techprint_Drop</defName>
+		<workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+		<label>Techprint drop</label>
+		<description>Having Mistress title , you have been granted acess to the technology of the Revia Empire as The Empire have trusted you enough to Kept the technology.</description>
+		<minTitle>Revia_Six</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>1000000000</cooldownDays>
+		<uiPosition>(2,9)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<Techprint_RE_ReviaRaceImperialEquipment>1</Techprint_RE_ReviaRaceImperialEquipment>
+				<Techprint_RE_ReviaRaceImperialLegendary>1</Techprint_RE_ReviaRaceImperialLegendary>
+			</itemsToDrop>
+			<favorCost>1000000000</favorCost>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+	</RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>SupplyDrop</defName>
+		<label>supply drop</label>
+		<description>Call for a drop of 125 wood and 75 steel.</description>
+		<minTitle>Revia_One</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,0)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<WoodLog>125</WoodLog>
+				<Steel>75</Steel>
+			</itemsToDrop>
+			<favorCost>3</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+			<defName>SupplyDropII</defName>
+		<label>Building supply drop</label>
+		<description>Call for a drop of 250 wood, 100 steel, 50 plasteel, and 8 components.</description>
+		<minTitle>Revia_Two</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<prerequisite>SupplyDrop</prerequisite>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,0)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<WoodLog>250</WoodLog>
+				<Plasteel>50</Plasteel>
+				<Steel>100</Steel>
+				<ComponentIndustrial>8</ComponentIndustrial>
+			</itemsToDrop>
+			<favorCost>6</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>MaterialDrop</defName>
+		<label>Material drop</label>
+		<description>Call for a drop of 100 cloth and 25 steel.</description>
+		<minTitle>Revia_One</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,1)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<Cloth>100</Cloth>
+				<Steel>25</Steel>
+			</itemsToDrop>
+			<favorCost>4</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>  
+  
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>MaterialDropII</defName>
+		<label>Superior materials drop</label>
+		<description>Call for a drop of 75 synthread, 250 cloth, and 50 steel.</description>
+		<minTitle>Revia_Two</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<prerequisite>MaterialDrop</prerequisite>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,1)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<Synthread>75</Synthread>
+				<Cloth>250</Cloth>
+				<Steel>50</Steel>
+			</itemsToDrop>
+			<favorCost>8</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>  
+  
+  
+
+  
+
+
+
+
+
+  
+  
+
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>CombatSupplies</defName>
+		<label>combat drug drop</label>
+		<description>Call for a drop of 6 go-juice, and 8 medicine..</description>
+		<minTitle>Revia_One</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,2)</uiPosition>
+		<royalAid>
+			<itemsToDrop>
+				<GoJuice>6</GoJuice>
+				<MedicineIndustrial>8</MedicineIndustrial>
+			</itemsToDrop>
+			<favorCost>3</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>CombatSuppliesII</defName>
+		<label>heavy combat drug drop</label>
+		<description>Call for a drop of 12 go-juice, and 16 medicine.</description>
+		<minTitle>Revia_Two</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,2)</uiPosition>
+		<prerequisite>CombatSupplies</prerequisite>
+		<royalAid>
+			<itemsToDrop>
+				<GoJuice>12</GoJuice>
+				<MedicineIndustrial>16</MedicineIndustrial>
+			</itemsToDrop>
+			<favorCost>6</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef ParentName="DropResourcesBase">
+		<defName>CombatSuppliesIII</defName>
+		<label>ultimate combat enuipment drop</label>
+		<description>Call for a drop of 18 go-juice, 18 medicine, and 6 advanced medicine, 25 steel.</description>
+		<minTitle>Revia_Four</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(2,2)</uiPosition>
+		<prerequisite>CombatSuppliesII</prerequisite>
+
+		<royalAid>
+			<itemsToDrop>
+				<GoJuice>18</GoJuice>
+				<MedicineIndustrial>18</MedicineIndustrial>
+				<MedicineUltratech>6</MedicineUltratech>
+				<Steel>25</Steel>
+			</itemsToDrop>
+			<favorCost>8</favorCost>
+		</royalAid>
+  </RoyalTitlePermitDef>
+
+<!--  afasgesdgtrgqawq -->
+
+
+  <RoyalTitlePermitDef>
+		<defName>CallreviaLaborerTeam</defName>
+		<label>call laborer team</label>
+		<description>Call a group of 2 laborers to assist you for 3 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+		<workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+		<minTitle>Revia_One</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,3.5)</uiPosition>
+		<royalAid>
+			<favorCost>3</favorCost>
+			<pawnKindDef>RE_ReviaRaceLaborer</pawnKindDef>
+			<pawnCount>2</pawnCount>
+			<aidDurationDays>3</aidDurationDays>
+		</royalAid>
+		<cooldownDays>20</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+		<defName>CallreviaLaborerSquad</defName>
+		<label>call a large laborer team</label>
+		<description>Call a group of 4 laborers to assist you for 5 days. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+		<workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+		<minTitle>Revia_Two</minTitle>
+		<prerequisite>CallreviaLaborerTeam</prerequisite>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,3.5)</uiPosition>
+		<royalAid>
+			<favorCost>5</favorCost>
+			<pawnKindDef>RE_ReviaRaceLaborer</pawnKindDef>
+			<pawnCount>4</pawnCount>
+			<aidDurationDays>5</aidDurationDays>
+		</royalAid>
+		<cooldownDays>24</cooldownDays>
+  </RoyalTitlePermitDef>
+
+ <!-- <RoyalTitlePermitDef>
+   <defName>CallreviaLaborerUnion</defName>
+    <label>call a huge laborer team</label>
+    <description>Call a group of 8 laborers to assist you for 1 day. These workers can only do general labor tasks. You can control them as though they were your own colonists. You are required to keep them safe.</description>
+    <workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+   <minTitle>Heroic_Revia</minTitle>
+   <prerequisite>CallreviaLaborerTeam</prerequisite>
+    <faction>ReviaEmpireFaction</faction>
+    <permitPointCost>1</permitPointCost>
+    <uiPosition>(1,2)</uiPosition>
+    <royalAid>
+      <favorCost>8</favorCost>
+      <pawnKindDef>Revia_Common_Laborer</pawnKindDef>
+      <pawnCount>8</pawnCount>
+      <aidDurationDays>1</aidDurationDays>
+    </royalAid>
+    <cooldownDays>32</cooldownDays>
+  </RoyalTitlePermitDef>-->
+
+
+  <!-- Melee -->
+
+  <RoyalTitlePermitDef>
+		<defName>CallprivatePair</defName>
+		<label>call two Revia privates.</label>
+		<description>Call a pair of privates to fight alongside you.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Revia_Two</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,5)</uiPosition>
+		<royalAid>
+			<favorCost>3</favorCost>
+			<pawnKindDef>RE_ReviaRacePrivate</pawnKindDef>
+			<pawnCount>2</pawnCount>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+		<cooldownDays>24</cooldownDays>
+  </RoyalTitlePermitDef>
+  
+  <RoyalTitlePermitDef>
+		<defName>CallSquadteam</defName>
+		<label>call a private team.</label>
+		<description>Call a squad of six privates to fight alongside you.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Revia_Three</minTitle>
+		<prerequisite>CallprivatePair</prerequisite>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,5)</uiPosition>
+		<royalAid>
+			<favorCost>6</favorCost>
+			<pawnKindDef>RE_ReviaRacePrivate</pawnKindDef>
+			<pawnCount>6</pawnCount>
+			<targetingRange>39.9</targetingRange>
+		</royalAid>
+		<cooldownDays>28</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+        <defName>Callarmyteam</defName>
+        <label>call a Private army.</label>
+        <description>Call a squad of 15 privates to fight alongside you.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>Revia_Five</minTitle>
+        <prerequisite>CallSquadteam</prerequisite>
+        <faction>ReviaEmpireFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <uiPosition>(2,5)</uiPosition>
+        <royalAid>
+            <favorCost>6</favorCost>
+            <pawnKindDef>RE_ReviaRacePrivate</pawnKindDef>
+            <pawnCount>15</pawnCount>
+            <targetingRange>39.9</targetingRange>
+        </royalAid>
+        <cooldownDays>28</cooldownDays>
+  </RoyalTitlePermitDef>
+ <!-- Sniper -->
+
+  <RoyalTitlePermitDef>
+		<defName>CallscoutPair</defName>
+		<label>call two Revia Scout.</label>
+		<description>Call a pair of ranged Revia Empire Scout to fight alongside with you for new days.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Revia_Two</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(0,6)</uiPosition>
+		<royalAid>
+			<favorCost>3</favorCost>
+			<pawnKindDef>RE_ReviaRaceScout</pawnKindDef>
+			<pawnCount>2</pawnCount>
+			<aidDurationDays>2</aidDurationDays>
+		</royalAid>
+		<cooldownDays>24</cooldownDays>
+  </RoyalTitlePermitDef>
+  
+
+  <RoyalTitlePermitDef>
+		<defName>CallscoutTeam</defName>
+		<label>call five Revia Scouts.</label>
+		<description>Call five Revia Scout equipped with charge railgun to fight alongside you.</description>
+		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+		<minTitle>Revia_Four</minTitle>
+		<prerequisite>CallscoutPair</prerequisite>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<uiPosition>(1,6)</uiPosition>
+		<royalAid>
+			<favorCost>3</favorCost>
+			<pawnKindDef>RE_ReviaRaceScout</pawnKindDef>
+			<pawnCount>5</pawnCount>
+			<aidDurationDays>2</aidDurationDays>
+		</royalAid>
+		<cooldownDays>28</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+        <defName>CallVeteranPair</defName>
+        <label>call Two Revia Veterans</label>
+        <description>Call two Revia Veteran equipped with Heavy enquipment to fight alongside you.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>Revia_Three</minTitle>
+        <faction>ReviaEmpireFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <uiPosition>(0,7)</uiPosition>
+        <royalAid>
+            <favorCost>3</favorCost>
+            <pawnKindDef>RE_ReviaRaceVeteran</pawnKindDef>
+            <pawnCount>2</pawnCount>
+            <aidDurationDays>1</aidDurationDays>
+        </royalAid>
+        <cooldownDays>20</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+        <defName>CallRusherPair</defName>
+        <label>call Two Revia Rusher</label>
+        <description>Call two Revia Rusher equipped with Heavy enquipment to fight alongside you.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>Revia_Three</minTitle>
+        <faction>ReviaEmpireFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <uiPosition>(1,7)</uiPosition>
+        <royalAid>
+            <favorCost>3</favorCost>
+            <pawnKindDef>RE_ReviaRaceRusher</pawnKindDef>
+            <pawnCount>2</pawnCount>
+            <aidDurationDays>1</aidDurationDays>
+        </royalAid>
+        <cooldownDays>16</cooldownDays>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+        <defName>CallRapidRespondTeam</defName>
+        <label>call Rapid Respond Team</label>
+        <description>Call five Revia Overseer these Overseer task is to rapid respond to defend the colony.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>Revia_Six</minTitle>
+        <faction>ReviaEmpireFaction</faction>
+        <permitPointCost>1</permitPointCost>
+        <uiPosition>(2,7)</uiPosition>
+        <royalAid>
+            <favorCost>2</favorCost>
+            <pawnKindDef>RE_ReviaRaceOverseer</pawnKindDef>
+            <pawnCount>5</pawnCount>
+            <aidDurationDays>1</aidDurationDays>
+        </royalAid>
+        <cooldownDays>6</cooldownDays>
+  </RoyalTitlePermitDef>
+
+    <!-- ====================booms and shuttle====================== -->
+  <RoyalTitlePermitDef>
+		<defName>CallShellSalvo</defName>
+		<label>call shell salvo</label>
+		<description>Call a salvo of 20 small shells.</description>
+		<workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+		<minTitle>Revia_Three</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<!--    <prerequisite>CallOrbitalStrike</prerequisite> -->
+		<cooldownDays>24</cooldownDays>
+		<uiPosition>(0,8)</uiPosition>
+		<royalAid>
+			<favorCost>4</favorCost>
+			<targetingRange>69.9</targetingRange>
+			<radius>25</radius>
+			<explosionRadiusRange>3.9</explosionRadiusRange>
+			<explosionCount>20</explosionCount>
+			<intervalTicks>10</intervalTicks>
+			<warmupTicks>70</warmupTicks>
+		</royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+		<defName>CallShellStorm</defName>
+		<label>call shell storm</label>
+		<description>call a storm of 50 small shells over a large area.</description>
+		<workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+		<minTitle>Revia_Four</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<prerequisite>CallShellSalvo</prerequisite>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>28</cooldownDays>
+		<uiPosition>(1,8)</uiPosition>
+		<royalAid>
+			<favorCost>6</favorCost>
+			<targetingRange>79.9</targetingRange>
+			<radius>25</radius>
+			<explosionRadiusRange>4.9</explosionRadiusRange>
+			<explosionCount>50</explosionCount>
+			<intervalTicks>5</intervalTicks>
+			<warmupTicks>150</warmupTicks>
+		</royalAid>
+  </RoyalTitlePermitDef>
+  
+
+
+  <RoyalTitlePermitDef>
+		<defName>CrackTheplanet</defName>
+		<label>Crack The Planet</label>
+		<description>Call a Bombartment, obliterating a huge area. Short delay after targetting so the user can escape.</description>
+		<workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+		<minTitle>Revia_Six</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<prerequisite>CallShellStorm</prerequisite>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>48</cooldownDays>
+		<uiPosition>(2,8)</uiPosition>
+		<royalAid>
+			<favorCost>10</favorCost>
+			<targetingRange>99.9</targetingRange>
+			<radius>15</radius>
+			<explosionRadiusRange>20</explosionRadiusRange>
+			<explosionCount>25</explosionCount>
+			<intervalTicks>15</intervalTicks>
+			<warmupTicks>250</warmupTicks>
+		</royalAid>
+  </RoyalTitlePermitDef>
+
+  
+  
+  <!-- Utility -->
+
+  <RoyalTitlePermitDef>
+		<defName>CallTransportShuttleOne</defName>
+		<label>call transport shuttle</label>
+		<description>Call a shuttle for your own use. have Cooldown of 12 days. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
+		<workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
+		<minTitle>Revia_Four</minTitle>
+		<faction>ReviaEmpireFaction</faction>
+		<permitPointCost>1</permitPointCost>
+		<cooldownDays>12</cooldownDays>
+		<usableOnWorldMap>true</usableOnWorldMap>
+		<uiPosition>(0,9)</uiPosition>
+		<royalAid>
+			<favorCost>8</favorCost>
+			<targetingRange>44.9</targetingRange>
+			<targetingRequireLOS>false</targetingRequireLOS>
+		</royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef>
+        <defName>CallTransportShuttleTwo</defName>
+        <label>call transport shuttle</label>
+        <description>Call a shuttle for your own use. Cooldown reduced from 12 days to 6. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
+        <workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
+        <minTitle>Revia_Six</minTitle>
+        <faction>ReviaEmpireFaction</faction>
+        <prerequisite>CallTransportShuttleOne</prerequisite>
+        <permitPointCost>1</permitPointCost>
+        <cooldownDays>6</cooldownDays>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <uiPosition>(1,9)</uiPosition>
+        <royalAid>
+            <favorCost>8</favorCost>
+            <targetingRange>44.9</targetingRange>
+            <targetingRequireLOS>false</targetingRequireLOS>
+        </royalAid>
+  </RoyalTitlePermitDef>
+  
+</Defs>
