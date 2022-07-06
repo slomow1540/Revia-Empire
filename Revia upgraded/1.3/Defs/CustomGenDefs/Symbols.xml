@@ -242,5 +242,56 @@
         <thing>ReviaRaceBloodstone</thing>
     </KCSG.SymbolDef>
 
+    <KCSG.SymbolDef>
+        <defName>VWE_Gun_SemiAutomaticRifle</defName>
+        <thing>VWE_Gun_SemiAutomaticRifle</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_MeleeWeapon_Shovel</defName>
+        <thing>VWE_MeleeWeapon_Shovel</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_Gun_RocketLauncher</defName>
+        <thing>VWE_Gun_RocketLauncher</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_Gun_Flamethrower</defName>
+        <thing>VWE_Gun_Flamethrower</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>RE_Gun_NightFall</defName>
+        <thing>RE_Gun_NightFall</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_Gun_SMG</defName>
+        <thing>VWE_Gun_SMG</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_MeleeWeapon_Axe</defName>
+        <thing>VWE_MeleeWeapon_Axe</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_Gun_HeavyFlamer</defName>
+        <thing>VWE_Gun_HeavyFlamer</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>VWE_Gun_HandheldMortar</defName>
+        <thing>VWE_Gun_HandheldMortar</thing>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>ReviaRaceRedHaze</defName>
+        <thing>ReviaRaceRedHaze</thing>
+    </KCSG.SymbolDef>
+
+
 
 </Defs>

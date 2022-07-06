@@ -10,9 +10,11 @@
         <equippedAngleOffset>-65</equippedAngleOffset>
         <relicChance>3</relicChance>
         <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
             <WorkToMake>1000000</WorkToMake>
             <Flammability>0</Flammability>
             <MarketValue>500000</MarketValue>
+            <DeteriorationRate>0</DeteriorationRate>
             <Mass>1</Mass>
         </statBases>
         <equippedStatOffsets>
@@ -51,6 +53,9 @@
             </li>
             <li>
                 <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+            <li Class="CompProperties_BladelinkWeapon">
+                <biocodeOnEquip>true</biocodeOnEquip>
             </li>
         </comps>
         <techLevel>Spacer</techLevel>

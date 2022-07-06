@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <DamageDef>
+        <defName>RE_BigBakuretsu</defName>
+        <label>Bakuretsu</label>
+        <workerClass>DamageWorker_Flame</workerClass>
+        <externalViolence>true</externalViolence>
+        <isExplosive>true</isExplosive>
+        <deathMessage>{0} has died in an nuke.</deathMessage>
+        <hediff>Shredded</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <armorCategory>Sharp</armorCategory>
+        <minDamageToFragment>50</minDamageToFragment>
+        <defaultDamage>250</defaultDamage>
+        <defaultStoppingPower>2.5</defaultStoppingPower>
+        <defaultArmorPenetration>1.0</defaultArmorPenetration>
+        <buildingDamageFactorImpassable>5</buildingDamageFactorImpassable>
+        <buildingDamageFactorPassable>4</buildingDamageFactorPassable>
+        <plantDamageFactor>1</plantDamageFactor>
+        <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+        <explosionHeatEnergyPerCell>25</explosionHeatEnergyPerCell>
+        <explosionCellFleck>BlastFlame</explosionCellFleck>
+        <explosionColorCenter>(0.96, 0.17, 0.17)</explosionColorCenter>
+        <explosionColorEdge>(0.9, 0.72, 0.41)</explosionColorEdge>
+        <soundExplosion>Explosion_GiantBomb</soundExplosion>
+        <combatLogRules>Damage_Bomb</combatLogRules>
+    </DamageDef>
+
+</Defs>

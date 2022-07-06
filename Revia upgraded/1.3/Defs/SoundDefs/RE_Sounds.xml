@@ -84,5 +84,26 @@
       </li>
     </subSounds>
   </SoundDef>
+
+  <SoundDef>
+    <defName>RE_NightFall</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/RE_nightfall_shot</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>85</min>
+          <max>100</max>
+        </volumeRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
   
 </Defs>

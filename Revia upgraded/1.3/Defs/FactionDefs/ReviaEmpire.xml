@@ -207,7 +207,7 @@
           <li>RE_MediumBigVault_3</li>
           <li>RE_LargeSettlement_1</li>
           <li>RE_LargeSpStructure_2</li>
-          <li>RE_FortLayers_1</li>
+          <li>RE_Fort</li>
         </chooseFromlayouts>
       </li>
     </modExtensions>
