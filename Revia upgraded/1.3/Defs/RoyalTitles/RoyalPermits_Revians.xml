@@ -143,7 +143,7 @@
   <RoyalTitlePermitDef ParentName="DropResourcesBase">
 		<defName>CombatSupplies</defName>
 		<label>combat drug drop</label>
-		<description>Call for a drop of 6 go-juice, and 8 medicine..</description>
+		<description>Call for a drop of 6 go-juice, and 4 medicine.</description>
 		<minTitle>Revia_One</minTitle>
 		<faction>ReviaEmpireFaction</faction>
 		<permitPointCost>1</permitPointCost>
@@ -151,7 +151,7 @@
 		<royalAid>
 			<itemsToDrop>
 				<GoJuice>6</GoJuice>
-				<MedicineIndustrial>8</MedicineIndustrial>
+				<MedicineIndustrial>4</MedicineIndustrial>
 			</itemsToDrop>
 			<favorCost>3</favorCost>
 		</royalAid>
@@ -159,8 +159,8 @@
   
   <RoyalTitlePermitDef ParentName="DropResourcesBase">
 		<defName>CombatSuppliesII</defName>
-		<label>heavy combat drug drop</label>
-		<description>Call for a drop of 12 go-juice, and 16 medicine.</description>
+		<label>Small Scarleferim drop</label>
+		<description>Call for a drop of 4 Scarleferim, 8 medicine, and 3 glitterworld medicine.</description>
 		<minTitle>Revia_Two</minTitle>
 		<faction>ReviaEmpireFaction</faction>
 		<permitPointCost>1</permitPointCost>
@@ -168,8 +168,9 @@
 		<prerequisite>CombatSupplies</prerequisite>
 		<royalAid>
 			<itemsToDrop>
-				<GoJuice>12</GoJuice>
-				<MedicineIndustrial>16</MedicineIndustrial>
+				<RE_ScarleferimInjector>4</RE_ScarleferimInjector>
+				<MedicineIndustrial>8</MedicineIndustrial>
+				<MedicineUltratech>3</MedicineUltratech>
 			</itemsToDrop>
 			<favorCost>6</favorCost>
 		</royalAid>
@@ -177,8 +178,8 @@
   
   <RoyalTitlePermitDef ParentName="DropResourcesBase">
 		<defName>CombatSuppliesIII</defName>
-		<label>ultimate combat enuipment drop</label>
-		<description>Call for a drop of 18 go-juice, 18 medicine, and 6 advanced medicine, 25 steel.</description>
+		<label>Scarleferim drop</label>
+		<description>Call for a drop of 12 Scarleferim, 10 medicine, and 6 glitterworld medicine.</description>
 		<minTitle>Revia_Four</minTitle>
 		<faction>ReviaEmpireFaction</faction>
 		<permitPointCost>1</permitPointCost>
@@ -187,10 +188,9 @@
 
 		<royalAid>
 			<itemsToDrop>
-				<GoJuice>18</GoJuice>
-				<MedicineIndustrial>18</MedicineIndustrial>
+				<RE_ScarleferimInjector>12</RE_ScarleferimInjector>
+				<MedicineIndustrial>10</MedicineIndustrial>
 				<MedicineUltratech>6</MedicineUltratech>
-				<Steel>25</Steel>
 			</itemsToDrop>
 			<favorCost>8</favorCost>
 		</royalAid>
@@ -260,7 +260,7 @@
 
   <RoyalTitlePermitDef>
 		<defName>CallprivatePair</defName>
-		<label>call two Revia privates.</label>
+		<label>call two Revia privates</label>
 		<description>Call a pair of privates to fight alongside you.</description>
 		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
 		<minTitle>Revia_Two</minTitle>
@@ -278,7 +278,7 @@
   
   <RoyalTitlePermitDef>
 		<defName>CallSquadteam</defName>
-		<label>call a private team.</label>
+		<label>call a private team</label>
 		<description>Call a squad of six privates to fight alongside you.</description>
 		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
 		<minTitle>Revia_Three</minTitle>
@@ -297,7 +297,7 @@
 
   <RoyalTitlePermitDef>
         <defName>Callarmyteam</defName>
-        <label>call a Private army.</label>
+        <label>call a Private army</label>
         <description>Call a squad of 15 privates to fight alongside you.</description>
         <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
         <minTitle>Revia_Five</minTitle>
@@ -317,7 +317,7 @@
 
   <RoyalTitlePermitDef>
 		<defName>CallscoutPair</defName>
-		<label>call two Revia Scout.</label>
+		<label>call two Revia Scout</label>
 		<description>Call a pair of ranged Revia Empire Scout to fight alongside with you for new days.</description>
 		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
 		<minTitle>Revia_Two</minTitle>
@@ -336,7 +336,7 @@
 
   <RoyalTitlePermitDef>
 		<defName>CallscoutTeam</defName>
-		<label>call five Revia Scouts.</label>
+		<label>call five Revia Scouts</label>
 		<description>Call five Revia Scout equipped with charge railgun to fight alongside you.</description>
 		<workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
 		<minTitle>Revia_Four</minTitle>

@@ -683,6 +683,41 @@
     <pointsScaleable>true</pointsScaleable>
   </IncidentDef>
 
-<!-- -->
+<!--  ehh i surender
 
+
+  <QuestScriptDef>
+  <defName>RE_Techprint_Gift</defName>
+  <defaultChallengeRating>4</defaultChallengeRating>
+  <isRootSpecial>true</isRootSpecial>
+  <questNameRules>
+    <rulesStrings>
+      <li>questName(sameQuestsCount>=1)->Royal [titleEnd]</li>
+      <li>titleEnd->Trust</li>
+      <li>titleEnd->Gift</li>
+      <li>titleEnd->achievement</li>
+    </rulesStrings>
+  </questNameRules>
+  <questDescriptionRules>
+    <rulesStrings>
+      <li>questDescription->[intro]The [asker_faction_leaderTitle] of [asker_faction_name] will trust you enough to give you their technology due to your title</li>
+    </rulesStrings>
+  </questDescriptionRules>
+  <root Class="QuestNode_Sequence">
+  <nodes>
+    <li Class="QuestNode_GetFaction">
+      <storeAs>faction</storeAs>
+      <allowEnemy>false</allowEnemy>
+      <allowNeutral>true</allowNeutral>
+      <allowAlly>true</allowAlly>
+    </li>
+
+    <li Class="QuestNode_RequirementsToAcceptColonistWithTitle">
+      <minimumTitle>Revia_Six</minimumTitle>
+      <faction>ReviaEmpireFaction</faction>
+    </li>
+
+  </nodes>
+
+  -->
 </Defs>
