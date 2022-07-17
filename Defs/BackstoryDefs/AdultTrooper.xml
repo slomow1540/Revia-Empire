@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.BackstoryDef>
+    <defName>ReviaRaceBackstoryAdultTrooper</defName>
+    <title>Revian Trooper</title>
+    <titleShort>Trooper</titleShort>
+    <baseDescription>[PAWN_nameDef] was a trained to be an a soldier. [PAWN_pronoun] is trained proffesinally and priotized on general purpose instead of killing everything.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>ReviaRaceBackstory</li>
+      <li>ReviaMarauder</li>
+    </spawnCategories>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>Nimble</defName>
+      </li>
+    </forcedTraits>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+  </AlienRace.BackstoryDef>
+</Defs>

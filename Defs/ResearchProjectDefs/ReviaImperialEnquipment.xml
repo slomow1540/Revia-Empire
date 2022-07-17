@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RE_ReviaRaceImperialEquipment</defName>
+    <label>Imperial Revia Equipment and materials</label>
+    <description>Create ultratech equipments and material used by the empire of revia, to be able to obtain this techprint, you must be able to steal it from the revia empire setlements around the world,  or obtain high title from the revia empire in order to obtain them.</description>
+    <baseCost>10000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>ReviaRaceResearchTab</tab>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>ReviaRaceAdvancedEquipment</li>
+      <li>PrecisionRifling</li>
+    </prerequisites>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>1</techprintCommonality>
+    <techprintMarketValue>25000</techprintMarketValue>
+    <heldByFactionCategoryTags><li>ReviaEmpire</li></heldByFactionCategoryTags>
+    <researchViewX>6.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+</Defs>
