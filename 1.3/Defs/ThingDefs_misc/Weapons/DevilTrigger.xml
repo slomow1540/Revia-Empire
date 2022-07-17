@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_DevilTrigger</defName>
+        <label>Devil Trigger Shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/RedChargeLance</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>60</damageAmountBase>
+            <armorPenetrationBase>100000.0</armorPenetrationBase>
+            <stoppingPower>1.0</stoppingPower>
+            <speed>120</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_DevilTrigger</defName>
+        <label>Devil Trigger</label>
+        <description>A weapon seems to have the blessing from scarne, guilding all the bullet directly into enemy , nothing can stop it , even the strongest armor.</description>
+        <techLevel>Spacer</techLevel>
+        <tradeability>Sellable</tradeability>
+        <relicChance>3</relicChance>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <graphicData>
+            <texPath>Things/WeaponRanged/DevilTrigger</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+            <li Class="CompProperties_Biocodable"/>
+            <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+                <LeechStrength>1.00</LeechStrength>
+            </li>
+            <li Class="CompProperties_BladelinkWeapon">
+                <biocodeOnEquip>true</biocodeOnEquip>
+            </li>
+        </comps>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <WorkToMake>1000000</WorkToMake>
+            <MarketValue>500000</MarketValue>
+            <Mass>1</Mass>
+            <AccuracyTouch>100000.0</AccuracyTouch>
+            <AccuracyShort>100000.0</AccuracyShort>
+            <AccuracyMedium>100000.00</AccuracyMedium>
+            <AccuracyLong>100000.0</AccuracyLong>
+            <RangedWeapon_Cooldown>0.20</RangedWeapon_Cooldown>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>100000</ShootingAccuracyPawn>
+            <SocialImpact>0.3</SocialImpact>
+            <MoveSpeed>10</MoveSpeed>
+            <PsychicEntropyRecoveryRate>5</PsychicEntropyRecoveryRate>
+            <MeleeDodgeChance>1.5</MeleeDodgeChance>
+            <PsychicSensitivity>1.5</PsychicSensitivity>
+        </equippedStatOffsets>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialLegendary</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>75</Plasteel>
+            <ComponentSpacer>15</ComponentSpacer>
+            <ComponentIndustrial>25</ComponentIndustrial>
+            <Uranium>120</Uranium>
+            <Gold>400</Gold>
+            <RE_PowerCell>400</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireLegendary</li>
+        </weaponTags>
+        <verbs>
+
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_DevilTrigger</defaultProjectile>
+                <warmupTime>0.1</warmupTime>
+                <range>55.0</range>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <burstShotCount>6</burstShotCount>
+                <soundCast>RE_DevilTriggerShot</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>0.6</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>0.3</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_Royalist</defName>
+        <label>Royalist shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/Red_Bullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>0.6</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>7</damageAmountBase>
+            <armorPenetrationBase>0.35</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_Royalist</defName>
+        <label>Royalist</label>
+        <description>A charged pistol.designed to quicky shoot the mag out and reload it at once , dealing significant damage in a short time though need reload afterward.</description>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponRanged/Royalist</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.7</drawSize>
+        </graphicData>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_SMG</soundInteract>
+        <statBases>
+            <Mass>0.4</Mass>
+            <AccuracyTouch>0.85</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.60</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+            <WorkToMake>38000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialEquipment</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>25</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Gold>10</Gold>
+            <RE_PowerCell>6</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireCommon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_Royalist</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>27.9</range>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <burstShotCount>7</burstShotCount>
+                <soundCast>VWE_Shot_ChargePistol</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>1</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>1.8</cooldownTime>
+                <armorPenetration>0.70</armorPenetration>
+            </li>
+        </tools>
+    </ThingDef>
+</Defs>

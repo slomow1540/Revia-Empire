@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>RE_ReviaRaceCommander</defName>
+    <nameMakerFemale>NamerPersonReviaEmpire</nameMakerFemale>
+    <label>Revia Commander</label>
+    <royalTitleChance>0.4</royalTitleChance>
+    <titleSelectOne>
+      <li>Revia_One</li>
+      <li>Revia_Two</li>
+    </titleSelectOne>
+    <defaultFactionType>ReviaEmpireFaction</defaultFactionType>
+    <race>ReviaRaceAlien</race>
+    <combatPower>120</combatPower>
+    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
+    <itemQuality>Excellent</itemQuality>
+    <apparelTags>
+      <li>SpacerMilitary</li>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>VAE_Apparel_HeavyMarineArmor</li>
+      <li>VAE_Headgear_HeavyMarineHelmet</li>
+      <li>VWE_Apparel_Exoframe</li>
+      <li>Apparel_PackBroadshield</li>
+      <li>Apparel_CollarShirt</li>
+    </apparelRequired>
+    <apparelMoney>9000~15000</apparelMoney>
+    <apparelColor>(219,85,77)</apparelColor>
+    <biocodeWeaponChance>0.9</biocodeWeaponChance>
+    <weaponTags>
+      <li>ReviaEmpireMelleeAdvanced</li>
+      <li>ReviaEmpireSniper</li>
+      <li>ReviaEmpireHeavy</li>
+    </weaponTags>
+    <initialWillRange>15~40</initialWillRange>
+    <initialResistanceRange>12~22</initialResistanceRange>
+    <weaponMoney>99999~99999</weaponMoney>
+    <techHediffsChance>0.8</techHediffsChance>
+    <techHediffsMoney>99999~99999</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+      <li>ArchotechLeg</li>
+    </techHediffsRequired>
+    <skills>
+      <li>
+        <skill>Shooting</skill>
+        <range>18~20</range>
+      </li>
+      <li>
+        <skill>Melee</skill>
+        <range>18~20</range>
+      </li>
+    </skills>
+    <isFighter>true</isFighter>
+    <invNutrition>5</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>20</choiceChance>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>4~5</countRange>
+        </li>
+        <li>
+          <choiceChance>80</choiceChance>
+          <thingDef>MedicineUltratech</thingDef>
+          <countRange>2~3</countRange>
+        </li>
+      </subOptionsChooseOne>
+
+      <subOptionsTakeAll>
+        <li>
+          <thingDef>RE_ScarleferimInjector</thingDef>
+          <countRange>1</countRange>
+        </li>
+      </subOptionsTakeAll>
+
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

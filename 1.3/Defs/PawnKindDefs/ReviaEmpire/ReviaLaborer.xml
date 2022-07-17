@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>RE_ReviaRaceLaborer</defName>
+    <nameMakerFemale>NamerPersonReviaEmpire</nameMakerFemale>
+    <label>Revia laborer</label>
+    <defaultFactionType>ReviaEmpireFaction</defaultFactionType>
+    <race>ReviaRaceAlien</race>
+    <combatPower>20</combatPower>
+    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>false</isFighter>
+    <requiredWorkTags> <!-- Must be capable of labor, as this pawn kind is used in laborer quests. -->
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+      <li>Cleaning</li>
+      <li>Hauling</li>
+      <li>Mining</li>
+      <li>Firefighting</li>
+    </requiredWorkTags>
+    <apparelTags>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_Duster</li>
+      <li>Apparel_CollarShirt</li>
+    </apparelRequired>
+    <apparelMoney>1000~4000</apparelMoney>
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelColor>(196,86,79)</apparelColor>
+    <biocodeWeaponChance>0.8</biocodeWeaponChance>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>10~18</initialResistanceRange>
+    <weaponMoney>3500~10000</weaponMoney>
+    <techHediffsChance>0.5</techHediffsChance>
+    <techHediffsMoney>3000~5000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+
+  </PawnKindDef>
+</Defs>

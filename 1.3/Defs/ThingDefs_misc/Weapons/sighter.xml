@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>RE_Melee_Sighter</defName>
+        <label>Sighter</label>
+        <description>A scythe made with intention to kill and left nothing behind ,a weapon feared by most and very deadly , for those who master it.</description>
+        <soundInteract>Interact_BladelinkMonoSword</soundInteract>
+        <meleeHitSound>MeleeHit_BladelinkMonoSword</meleeHitSound>
+        <relicChance>3</relicChance>
+        <statBases>
+            <WorkToMake>18000</WorkToMake>
+            <Mass>1</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>4</MoveSpeed>
+            <MeleeDodgeChance>1.5</MeleeDodgeChance>
+            <PsychicSensitivity>0.3</PsychicSensitivity>
+            <PsychicEntropyRecoveryRate>2</PsychicEntropyRecoveryRate>
+        </equippedStatOffsets>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialWeaponary</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>11</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>100</Plasteel>
+            <ComponentSpacer>6</ComponentSpacer>
+            <ComponentIndustrial>12</ComponentIndustrial>
+            <Uranium>30</Uranium>
+            <Gold>30</Gold>
+            <RE_PowerCell>12</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireMelleeAdvanced</li>
+        </weaponTags>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+            <li Class="CompProperties_Biocodable"/>
+            <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+                <LeechStrength>3.00</LeechStrength>
+            </li>
+        </comps>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponMelee/sighter</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>0.5</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>60</power>
+                <cooldownTime>1.2</cooldownTime>
+                <armorPenetration>0.9</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Flame</def>
+                        <amount>25</amount>
+                        <chance>0.8</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>0.7</cooldownTime>
+                <armorPenetration>0.9</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Flame</def>
+                        <amount>15</amount>
+                        <chance>0.4</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+            <li>
+                <label>tail</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>22</power>
+                <cooldownTime>0.3</cooldownTime>
+                <armorPenetration>0.5</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Stun</def>
+                        <amount>10</amount>
+                        <chance>0.9</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

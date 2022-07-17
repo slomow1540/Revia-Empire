@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>ReviaEmpireNamerLeader</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_leaderTitle->[cultureLeaderAdjective] [cultureLeaderNoun]</li>
+
+        <li>cultureLeaderAdjective->High</li>
+
+        <li>cultureLeaderNoun->Mistress</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

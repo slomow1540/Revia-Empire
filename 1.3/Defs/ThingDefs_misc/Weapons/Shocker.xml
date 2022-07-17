@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>RE_Melee_Shocker</defName>
+        <label>Shocker</label>
+        <description>A Heavy weapon , used to breach stuff , sending a strong shockwave inside a building destroying them from inside out.</description>
+        <soundInteract>Interact_ZeusHammer</soundInteract>
+        <meleeHitSound>MeleeHit_ZeusHammer</meleeHitSound>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <relicChance>3</relicChance>
+        <statBases>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>5</Mass>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialEquipment</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>75</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Gold>20</Gold>
+            <RE_PowerCell>8</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireMelleeCommon</li>
+        </weaponTags>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+            <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponMelee/shocker</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>0.8</cooldownTime>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Demolish</li>
+                </capacities>
+                <power>25</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

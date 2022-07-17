@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>RE_Melee_LightYear</defName>
+        <label>LightYear</label>
+        <description>A very lightweight greatsword with tip of plasma cutting though everything.</description>
+        <soundInteract>Interact_MonoSword</soundInteract>
+        <meleeHitSound>MeleeHit_MonoSword</meleeHitSound>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <relicChance>3</relicChance>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+            <Mass>0.5</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>2</MoveSpeed>
+            <MeleeDodgeChance>2.5</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialEquipment</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>50</Plasteel>
+            <ComponentSpacer>3</ComponentSpacer>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Gold>10</Gold>
+            <RE_PowerCell>6</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireMelleeCommon</li>
+        </weaponTags>
+        <comps>
+            <li>
+                <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+            <li Class="CompProperties_Biocodable"/>
+            <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+                <LeechStrength>1.00</LeechStrength>
+            </li>
+        </comps>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponMelee/lightyear</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>0.3</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>0.9</cooldownTime>
+                <armorPenetration>0.7</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Flame</def>
+                        <amount>10</amount>
+                        <chance>0.2</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>22</power>
+                <cooldownTime>0.6</cooldownTime>
+                <armorPenetration>0.75</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Flame</def>
+                        <amount>15</amount>
+                        <chance>0.4</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

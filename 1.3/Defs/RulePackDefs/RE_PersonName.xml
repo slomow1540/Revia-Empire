@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerPersonReviaEmpire</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[firstName] [lastName]</li>
+
+        
+        <li>firstName->Ai</li>
+        <li>firstName->Aya</li>
+        <li>firstName->Asami</li>
+        <li>firstName->Sakura</li>
+        <li>firstName->Scarlet</li>
+        <li>firstName->Yuko</li>
+        <li>firstName->Yui</li>
+        <li>firstName->Blood</li>
+        <li>firstName->Yoko</li>
+        <li>firstName->Solstice</li>
+        <li>firstName->Eclipse</li>
+        <li>firstName->Yakumo</li>
+        <li>firstName->Yuri</li>
+        <li>firstName->Verdant</li>
+        <li>firstName->Shion</li>
+        <li>firstName->Sofiya</li>
+        <li>firstName->Unmei</li>
+        <li>firstName->Usagi</li>
+        <li>firstName->Tohru</li>
+        <li>firstName->Rei</li>
+        <li>firstName->Motoko</li>
+        <li>firstName->Kyouko</li>
+        <li>firstName->Hanako</li>
+        <li>firstName->Hikari</li>
+        <li>firstName->Aki</li>
+        <li>firstName->Rena</li>
+        <li>firstName->Nobue</li>
+        <li>firstName->Abigail</li>
+        <li>firstName->Fubuki</li>
+        <li>firstName->Sora</li>
+        <li>firstName->Akane</li>
+
+        <li>lastName->Tokisaki</li>
+        <li>lastName->Aisaka</li>
+        <li>lastName->Oshino</li>
+        <li>lastName->Yukinoshita</li>
+        <li>lastName->Itadori</li>
+        <li>lastName->Oikawa</li>
+        <li>lastName->Souma</li>
+        <li>lastName->Liebert</li>
+        <li>lastName->Brando</li>
+        <li>lastName->Souryuu</li>
+        <li>lastName->Okazaki</li>
+        <li>lastName->Scarlet</li>
+        <li>lastName->Midoriya</li>
+        <li>lastName->Nishimiya</li>
+        <li>lastName->Gremory</li>
+        <li>lastName->Saiki</li>
+        <li>lastName->Miyamura</li>
+        <li>lastName->Miyazono</li>
+        <li>lastName->Akabane</li>
+        <li>lastName->Akemi</li>
+        <li>lastName->Okabe</li>
+        <li>lastName->Ikari</li>
+        <li>lastName->Reigen</li>
+        <li>lastName->Emiya</li>
+        <li>lastName->Michaelis</li>
+        <li>lastName->Kageyama</li>
+        <li>lastName->Misaka</li>
+        <li>lastName->Shinomiya</li>
+        <li>lastName->Yuuki</li>
+        <li>lastName->Matoi</li>
+        <li>lastName->Katsuragi</li>
+
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>
