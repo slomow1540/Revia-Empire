@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Defs>
-  <ChemicalDef>
-    <defName>RE_ScarleferimInjection</defName>
-    <label>Skarnite</label>
-    <addictionHediff>RE_ScarleferimAddiction</addictionHediff>
-    <canBinge>false</canBinge>
-  </ChemicalDef>
-</Defs>
