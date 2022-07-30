@@ -69,7 +69,7 @@
                 <defaultProjectile>RE_Bullet_Melter</defaultProjectile>
                 <warmupTime>2.0</warmupTime>
                 <range>42.0</range>
-                <burstShotCount>3</burstShotCount>
+                <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
                 <soundCast>VWE_Shot_ChargeMinigun</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
