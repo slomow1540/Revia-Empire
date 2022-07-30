@@ -5,7 +5,7 @@
         <label>unfinished Power Cell</label>
         <description>An unfinished Power Cell</description>
         <statBases>
-            <Flammability>0</Flammability>
+            <Flammability>0.5</Flammability>
         </statBases>
         <graphicData>
             <texPath>Things/Item/Unfinished/PowerCell_Unfinished</texPath>
