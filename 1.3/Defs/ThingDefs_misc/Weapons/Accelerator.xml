@@ -56,7 +56,7 @@
             <ComponentIndustrial>20</ComponentIndustrial>
             <Uranium>60</Uranium>
             <Gold>40</Gold>
-            <RE_PowerCell>10</RE_PowerCell>
+            <RE_PowerCell>25</RE_PowerCell>
         </costList>
         <weaponTags>
             <li>ReviaEmpireHeavy</li>

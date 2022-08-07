@@ -33,7 +33,7 @@
             <ComponentIndustrial>12</ComponentIndustrial>
             <Uranium>30</Uranium>
             <Gold>30</Gold>
-            <RE_PowerCell>12</RE_PowerCell>
+            <RE_PowerCell>40</RE_PowerCell>
         </costList>
         <weaponTags>
             <li>ReviaEmpireMelleeAdvanced</li>

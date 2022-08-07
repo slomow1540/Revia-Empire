@@ -47,6 +47,13 @@
             <Plasteel>10</Plasteel>
             <ReviaRaceBloodstone>5</ReviaRaceBloodstone>
         </costList>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
     </ThingDef>
 
 </Defs>

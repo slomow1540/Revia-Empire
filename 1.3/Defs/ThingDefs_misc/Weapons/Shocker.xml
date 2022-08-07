@@ -27,7 +27,7 @@
             <ComponentSpacer>4</ComponentSpacer>
             <ComponentIndustrial>6</ComponentIndustrial>
             <Gold>20</Gold>
-            <RE_PowerCell>8</RE_PowerCell>
+            <RE_PowerCell>10</RE_PowerCell>
         </costList>
         <weaponTags>
             <li>ReviaEmpireMelleeCommon</li>

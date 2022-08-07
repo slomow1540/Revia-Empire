@@ -50,7 +50,7 @@
             <ComponentIndustrial>25</ComponentIndustrial>
             <Uranium>100</Uranium>
             <Gold>80</Gold>
-            <RE_PowerCell>20</RE_PowerCell>
+            <RE_PowerCell>30</RE_PowerCell>
         </costList>
         <recipeMaker>
             <recipeUsers>

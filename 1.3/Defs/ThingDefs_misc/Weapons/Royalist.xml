@@ -56,7 +56,7 @@
             <ComponentSpacer>4</ComponentSpacer>
             <ComponentIndustrial>6</ComponentIndustrial>
             <Gold>10</Gold>
-            <RE_PowerCell>6</RE_PowerCell>
+            <RE_PowerCell>12</RE_PowerCell>
         </costList>
         <weaponTags>
             <li>ReviaEmpireCommon</li>

@@ -56,7 +56,7 @@
             <ComponentIndustrial>15</ComponentIndustrial>
             <Uranium>50</Uranium>
             <Gold>25</Gold>
-            <RE_PowerCell>15</RE_PowerCell>
+            <RE_PowerCell>18</RE_PowerCell>
         </costList>
         <weaponTags>
             <li>ReviaEmpireSniper</li>
