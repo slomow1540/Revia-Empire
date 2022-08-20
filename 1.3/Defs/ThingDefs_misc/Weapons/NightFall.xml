@@ -6,7 +6,7 @@
         <defName>RE_Bullet_NightFall</defName>
         <label>NightFallSmall</label>
         <graphicData>
-            <texPath>Things/Projectile/Charge_Big_Bullet</texPath>
+            <texPath>Things/Projectile/RE_Charge_Big_Bullet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <thingClass>Projectile_Explosive</thingClass>
@@ -32,7 +32,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <graphicData>
-            <texPath>Things/WeaponRanged/NightFall</texPath>
+            <texPath>Things/WeaponRanged/RE_NightFall</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.5</drawSize>
         </graphicData>

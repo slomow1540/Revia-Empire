@@ -5,7 +5,7 @@
         <defName>RE_Bullet_DevilTrigger</defName>
         <label>Devil Trigger Shot</label>
         <graphicData>
-            <texPath>Things/Projectile/RedChargeLance</texPath>
+            <texPath>Things/Projectile/RE_RedChargeLance</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
@@ -28,7 +28,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <graphicData>
-            <texPath>Things/WeaponRanged/DevilTrigger</texPath>
+            <texPath>Things/WeaponRanged/RE_DevilTrigger</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>0.8</drawSize>
         </graphicData>

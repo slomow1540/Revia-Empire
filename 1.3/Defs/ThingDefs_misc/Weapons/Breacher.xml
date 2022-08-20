@@ -6,7 +6,7 @@
         <defName>RE_Bullet_Breacher</defName>
         <label>Breacher charge</label>
         <graphicData>
-            <texPath>Things/Projectile/Charge_Big_Bullet</texPath>
+            <texPath>Things/Projectile/RE_Charge_Big_Bullet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <thingClass>Projectile_Explosive</thingClass>
@@ -28,7 +28,7 @@
         <description>An Charged Heavy weapon with an unstable core, stored and released in a powerfull blast.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponRanged/Breacher</texPath>
+            <texPath>Things/WeaponRanged/RE_Breacher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.3</drawSize>
         </graphicData>

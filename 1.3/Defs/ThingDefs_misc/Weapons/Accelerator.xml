@@ -6,7 +6,7 @@
         <defName>RE_Bullet_Accelerator</defName>
         <label>Accelerator</label>
         <graphicData>
-            <texPath>Things/Projectile/RedChargeLance</texPath>
+            <texPath>Things/Projectile/RE_RedChargeLance</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
@@ -23,7 +23,7 @@
         <description>A Accelerator.the charged energy greatly increases the damage done.\n\nCapable of covering the entire area in volley of anti-armor rounds, this Accelerator is often used by Revia veterans during their infamous raids.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponRanged/Accelerator</texPath>
+            <texPath>Things/WeaponRanged/RE_Accelerator</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.22</drawSize>
         </graphicData>
@@ -42,7 +42,7 @@
             <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
         </statBases>
         <recipeMaker>
-            <researchPrerequisite>RE_ReviaRaceImperialWeaponary</researchPrerequisite>
+            <researchPrerequisite>RE_ReviaRaceImperialAdvanced</researchPrerequisite>
             <skillRequirements>
                 <Crafting>12</Crafting>
             </skillRequirements>

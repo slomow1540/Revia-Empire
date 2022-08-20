@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Breacher -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_Tarnisher</defName>
+        <label>Tarnisher charge</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_Red_Bullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>0.95</drawSize>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>80</speed>
+            <damageDef>Flame</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionRadius>3</explosionRadius>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.27</preExplosionSpawnChance>
+            <shadowSize>0.6</shadowSize>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_Tarnisher</defName>
+        <label>Tarnisher</label>
+        <description>An light weapon with an unstable ammo, stored and released in a blast of flames.</description>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_Tarnisher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+        </graphicData>
+        <comps>
+            <li> <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <generateCommonality>0.3</generateCommonality>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+            <Mass>1.0</Mass>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <ComponentSpacer>4</ComponentSpacer>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <Gold>30</Gold>
+            <RE_PowerCell>15</RE_PowerCell>
+        </costList>
+        <recipeMaker>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <researchPrerequisite>RE_ReviaRaceImperialAdvanced</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_Tarnisher</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>27.9</range>
+                <forcedMissRadius>1.0</forcedMissRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>InfernoCannon_Fire</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>ReviaEmpireHeavy</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

@@ -5,7 +5,7 @@
         <defName>RE_Shell_EnegyBomb</defName>
         <label>EnergyBomb</label>
         <graphicData>
-            <texPath>Things/Projectile/EnergyBombMortar</texPath>
+            <texPath>Things/Projectile/RE_EnergyBombMortar</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>TransparentPostLight</shaderType>
         </graphicData>
@@ -82,7 +82,7 @@
         <label>auto Siege Mortar</label>
         <description>An automatic siege mortar and range finder designed to precisely target enemy that enter its range and deliver a constant deadly bombardment with multiple set up.</description>
         <graphicData>
-            <texPath>Things/Buildings/Security/TurretAutoMortar_Base</texPath>
+            <texPath>Things/Buildings/Security/RE_TurretAutoMortar_Base</texPath>
         </graphicData>
         <comps>
             <li Class="CompProperties_Explosive">
@@ -104,16 +104,14 @@
                     </thingDefs>
                 </fuelFilter>
                 <fuelCapacity>20</fuelCapacity>
-                <!-- 30 bursts -->
                 <fuelMultiplier>4</fuelMultiplier>
-                <!-- 1.333 steel per burst, 80 per full rearm -->
                 <initialFuelPercent>0</initialFuelPercent>
                 <autoRefuelPercent>0.5</autoRefuelPercent>
                 <showFuelGizmo>true</showFuelGizmo>
                 <minimumFueledThreshold>1</minimumFueledThreshold>
                 <factorByDifficulty>true</factorByDifficulty>
                 <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-                <fuelIconPath>Things/UI/Overlays/PowerCell</fuelIconPath>
+                <fuelIconPath>Things/UI/Overlays/RE_PowerCell</fuelIconPath>
             </li>
         </comps>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -137,7 +135,7 @@
             <ai_combatDangerous>true</ai_combatDangerous>
             <turretGunDef>RE_AutoMortar</turretGunDef>
         </building>
-        <uiIconPath>Things/Buildings/Security/TurretAutoMortar_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Buildings/Security/RE_TurretAutoMortar_MenuIcon</uiIconPath>
         <uiIconScale>0.9</uiIconScale>
     </ThingDef>
 
@@ -146,7 +144,7 @@
         <label>auto-mortar</label>
         <description>Automatic mortar launcher.</description>
         <graphicData>
-            <texPath>Things/Buildings/Security/TurretAutoMortar_Top</texPath>
+            <texPath>Things/Buildings/Security/RE_TurretAutoMortar_Top</texPath>
         </graphicData>
         <verbs>
             <li>

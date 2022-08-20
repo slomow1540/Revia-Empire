@@ -5,7 +5,7 @@
         <defName>RE_Bullet_ChargeRailgun</defName>
         <label>charge Railgun shot</label>
         <graphicData>
-            <texPath>Things/Projectile/RedChargeLance</texPath>
+            <texPath>Things/Projectile/RE_RedChargeLance</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
@@ -23,7 +23,7 @@
         <description>A charged-shot Railgun. Pulse-charge technology charges each shot with unstable energy as it leaves the barrel. Released on impact, the charged energy greatly increases the damage done.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponRanged/ChargeRailgun</texPath>
+            <texPath>Things/WeaponRanged/RE_ChargeRailgun</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.14</drawSize>
         </graphicData>

@@ -40,7 +40,7 @@
         </comps>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponMelee/shocker</texPath>
+            <texPath>Things/WeaponMelee/RE_shocker</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.2</drawSize>
         </graphicData>

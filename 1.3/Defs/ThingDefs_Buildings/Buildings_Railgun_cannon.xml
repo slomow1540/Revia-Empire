@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Artillery -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Shell_RailgunBomb</defName>
+        <label>RailgunCannonShot</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_EnergyBombCannon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>2.2</drawSize>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>RE_EnergyBomb</damageDef>
+            <!-- damage amount is the damage def default -->
+            <speed>300</speed>
+            <explosionRadius>3.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="RE_BaseRailgunCannon" ParentName="BuildingBase" Abstract="True">
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2.3,2.3)</drawSize>
+            <damageData>
+                <rect>(0.38,0.2,0.56375,0.8)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <altitudeLayer>Building</altitudeLayer>
+        <stealable>false</stealable>
+        <size>(3,3)</size>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.4</fillPercent>
+        <thingCategories>
+            <li>BuildingsSecurity</li>
+        </thingCategories>
+        <tickerType>Normal</tickerType>
+        <inspectorTabs>
+            <li>ITab_Shells</li>
+        </inspectorTabs>
+        <statBases>
+            <MaxHitPoints>750</MaxHitPoints>
+            <Flammability>0.7</Flammability>
+            <WorkToBuild>18000</WorkToBuild>
+            <Mass>30</Mass>
+            <Beauty>-5</Beauty>
+        </statBases>
+        <building>
+            <turretBurstWarmupTime>1.0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>4.0</turretBurstCooldownTime>
+            <buildingTags>
+                <li>Artillery</li>
+            </buildingTags>
+        </building>
+        <placeWorkers>
+            <li>PlaceWorker_NotUnderRoof</li>
+            <li>PlaceWorker_TurretTop</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>RE_ReviaRaceImperialWeaponary</li>
+        </researchPrerequisites>
+        <uiIconScale>1.1</uiIconScale>
+    </ThingDef>
+
+    <ThingDef ParentName="RE_BaseRailgunCannon">
+        <defName>RE_Turret_Railgun_Cannon</defName>
+        <label>Railgun cannon</label>
+        <description>A railgun Cannon that launches a powerful blast. Capable of inflicting devastating damage to both enemy forces and structures, this military machinery excels at laying down fire support for soldiers in the field.</description>
+        <thingClass>Building_TurretGun</thingClass>
+        <graphicData>
+            <texPath>Things/Buildings/Security/RE_TurretAutoMortar_Base</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <damageData>
+                <rect>(0.38,0.2,0.56375,0.8)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <techLevel>Spacer</techLevel>
+        <size>(3,3)</size>
+        <rotatable>true</rotatable>
+        <stealable>false</stealable>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>300</costStuffCount>
+        <costList>
+            <ComponentSpacer>15</ComponentSpacer>
+            <Plasteel>100</Plasteel>
+            <Uranium>80</Uranium>
+            <Gold>100</Gold>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <RE_PowerCell>15</RE_PowerCell>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <wickTicks>240</wickTicks>
+                <explosiveRadius>5.9</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+            </li>
+
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Refuelable">
+                <fuelLabel>Remaining energy</fuelLabel>
+                <fuelGizmoLabel>Energy level</fuelGizmoLabel>
+                <outOfFuelMessage>Cannot shoot: Out of energy</outOfFuelMessage>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>RE_PowerCell</li>
+                    </thingDefs>
+                </fuelFilter>
+                <fuelCapacity>21</fuelCapacity>
+                <!-- 21 bursts -->
+                <fuelMultiplier>3</fuelMultiplier>
+                <initialFuelPercent>0</initialFuelPercent>
+                <autoRefuelPercent>0.5</autoRefuelPercent>
+                <showFuelGizmo>true</showFuelGizmo>
+                <minimumFueledThreshold>1</minimumFueledThreshold>
+                <factorByDifficulty>true</factorByDifficulty>
+                <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+                <fuelIconPath>Things/UI/Overlays/RE_PowerCell</fuelIconPath>
+            </li>
+        </comps>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <building>
+            <turretGunDef>RE_RailgunCannon_Weapon</turretGunDef>
+            <turretTopDrawSize>3</turretTopDrawSize>
+            <buildingTags>
+                <li>Artillery</li>
+            </buildingTags>
+            <turretBurstWarmupTime>1.0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>4.0</turretBurstCooldownTime>
+        </building>
+        <uiIconPath>Things/Buildings/Security/RE_RailgunCannon_MenuIcon</uiIconPath>
+        <uiIconScale>1.1</uiIconScale>
+        <designationCategory>Security</designationCategory>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <researchPrerequisites>
+            <li>RE_ReviaRaceImperialWeaponary</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>RE_RailgunCannon_Weapon</defName>
+        <label>artillery</label>
+        <description>RailgunCannon cannon capable of oblirating enemy.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Security/RE_RailgunCannon_Top</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <comps>
+            <li> <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Shell_RailgunBomb</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <forcedMissRadius>1</forcedMissRadius>
+                <requireLineOfSight>false</requireLineOfSight>
+                <minRange>19.9</minRange>
+                <range>500</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>RE_ChargeRailgunShot</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <consumeFuelPerShot>1</consumeFuelPerShot>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+</Defs>

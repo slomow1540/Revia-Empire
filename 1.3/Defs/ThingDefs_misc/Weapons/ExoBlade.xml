@@ -64,7 +64,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <graphicData>
-            <texPath>Things/WeaponMelee/Exoblade</texPath>
+            <texPath>Things/WeaponMelee/RE_Exoblade</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.6</drawSize>
         </graphicData>

@@ -49,7 +49,7 @@
         </comps>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponMelee/sighter</texPath>
+            <texPath>Things/WeaponMelee/RE_sighter</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.5</drawSize>
         </graphicData>

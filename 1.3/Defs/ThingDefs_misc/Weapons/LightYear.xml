@@ -47,7 +47,7 @@
         </comps>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponMelee/lightyear</texPath>
+            <texPath>Things/WeaponMelee/RE_lightyear</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.2</drawSize>
         </graphicData>

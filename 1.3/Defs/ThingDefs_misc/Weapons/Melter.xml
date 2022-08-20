@@ -5,7 +5,7 @@
         <defName>RE_Bullet_Melter</defName>
         <label>Melter shot</label>
         <graphicData>
-            <texPath>Things/Projectile/Red_Bullet</texPath>
+            <texPath>Things/Projectile/RE_Red_Bullet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>TransparentPostLight</shaderType>
             <drawSize>0.8</drawSize>
@@ -25,7 +25,7 @@
         <description>a powereful rifle , after the development of the blaster and using the energy charged , and compress it and release it deal a great armor damage yet have lower damage.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponRanged/melter</texPath>
+            <texPath>Things/WeaponRanged/RE_melter</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.0</drawSize>
         </graphicData>
@@ -44,7 +44,7 @@
             <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
         </statBases>
         <recipeMaker>
-            <researchPrerequisite>RE_ReviaRaceImperialEquipment</researchPrerequisite>
+            <researchPrerequisite>RE_ReviaRaceImperialWeaponary</researchPrerequisite>
             <skillRequirements>
                 <Crafting>8</Crafting>
             </skillRequirements>

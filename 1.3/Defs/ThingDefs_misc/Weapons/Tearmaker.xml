@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_Tearmaker</defName>
+        <label>Tearmaker shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_RedChargeLance</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <stoppingPower>1.0</stoppingPower>
+            <speed>80</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_Tearmaker</defName>
+        <label>Tearmaker</label>
+        <description>A charged-shot adjusted Railgun. efficienty made from the charge railgun but spread the power to achieve max power.</description>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_Tearmaker</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.15</drawSize>
+        </graphicData>
+        <comps>
+            <li> <compClass>CompOversizedWeapon.CompOversizedWeapon</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>2.0</Mass>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.95</AccuracyShort>
+            <AccuracyMedium>0.98</AccuracyMedium>
+            <AccuracyLong>0.85</AccuracyLong>
+            <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialAdvanced</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>75</Plasteel>
+            <ComponentSpacer>8</ComponentSpacer>
+            <ComponentIndustrial>18</ComponentIndustrial>
+            <Uranium>50</Uranium>
+            <Gold>50</Gold>
+            <RE_PowerCell>20</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireSniper</li>
+        </weaponTags>
+        <verbs>
+            <!-- need to change the sound -->
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_Tearmaker</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>60.0</range>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>RE_ChargeRailgunShot</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

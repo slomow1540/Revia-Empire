@@ -5,7 +5,7 @@
         <defName>RE_Bullet_Blaster</defName>
         <label>Blaster shot</label>
         <graphicData>
-            <texPath>Things/Projectile/Red_Bullet</texPath>
+            <texPath>Things/Projectile/RE_Red_Bullet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>TransparentPostLight</shaderType>
         </graphicData>
@@ -24,7 +24,7 @@
         <description>An experimental gun,a prototype which suprisingly do well despite only use for testing purpose and now beeing used in the empire a weapon that focus an energy and release it in a blast.</description>
         <techLevel>Spacer</techLevel>
         <graphicData>
-            <texPath>Things/WeaponRanged/blaster</texPath>
+            <texPath>Things/WeaponRanged/RE_blaster</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>1.05</drawSize>
         </graphicData>
