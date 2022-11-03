@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>RE_Melee_ExoBlade</defName>
+        <label>ExoBlade</label>
+        <description>A mighty weapon on the battlefield in the right kind of hands. Made to cut through flesh and bones alike.\n\nFavored by Revia Empire, the Exoblade is a weapon usually used by Revia Rusher. With a powerful glowing blade it is capable of eliminating most enemies in close quarters.</description>
+        <soundInteract>Interact_PlasmaSword</soundInteract>
+        <meleeHitSound>MeleeHit_PlasmaSword</meleeHitSound>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <relicChance>3</relicChance>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <WorkToMake>1000000</WorkToMake>
+            <Flammability>0</Flammability>
+            <MarketValue>500000</MarketValue>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Mass>1</Mass>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>20</MoveSpeed>
+            <SocialImpact>0.5</SocialImpact>
+            <MeleeHitChance>2.5</MeleeHitChance>
+            <MeleeDodgeChance>5.0</MeleeDodgeChance>
+            <PsychicEntropyRecoveryRate>10</PsychicEntropyRecoveryRate>
+            <PsychicSensitivity>3</PsychicSensitivity>
+        </equippedStatOffsets>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialLegendary</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>150</Plasteel>
+            <ComponentSpacer>15</ComponentSpacer>
+            <ComponentIndustrial>20</ComponentIndustrial>
+            <Uranium>100</Uranium>
+            <Gold>500</Gold>
+            <RE_PowerCell>350</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireLegendary</li>
+        </weaponTags>
+        <comps>
+
+            <li Class="CompProperties_Biocodable"/>
+            <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+                <LeechStrength>5.00</LeechStrength>
+            </li>
+            <li Class="CompProperties_BladelinkWeapon">
+                <biocodeOnEquip>true</biocodeOnEquip>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <techLevel>Spacer</techLevel>
+        <tradeability>Sellable</tradeability>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <graphicData>
+            <texPath>Things/WeaponMelee/RE_Exoblade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.6</drawSize>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>20</power>
+                <cooldownTime>0.2</cooldownTime>
+                <armorPenetration>0.6</armorPenetration>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>40</power>
+                <cooldownTime>0.3</cooldownTime>
+                <armorPenetration>1.0</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Stun</def>
+                        <amount>30</amount>
+                        <chance>0.9</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Gash</li>
+                </capacities>
+                <power>50</power>
+                <cooldownTime>0.1</cooldownTime>
+                <armorPenetration>0.95</armorPenetration>
+                <extraMeleeDamages>
+                    <li>
+                        <def>Flame</def>
+                        <amount>50</amount>
+                        <chance>1.0</chance>
+                    </li>
+                </extraMeleeDamages>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- maybe not today lad-->
+    <DamageDef ParentName="StunBase">
+        <defName>RE_EMP</defName>
+        <label>RE_EMP</label>
+        <externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+        <deathMessage>{0} has been EMPed to death.</deathMessage>
+        <harmsHealth>false</harmsHealth>
+        <impactSoundType>Electric</impactSoundType>
+        <defaultDamage>50</defaultDamage>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastEMP</explosionCellFleck>
+        <explosionColorEdge>(0.96, 0.17, 0.17)</explosionColorEdge>
+        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <combatLogRules>Damage_EMP</combatLogRules>
+    </DamageDef>
+</Defs>

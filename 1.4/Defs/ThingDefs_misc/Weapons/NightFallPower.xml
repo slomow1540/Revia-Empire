@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Breacher -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_NightFallBig</defName>
+        <label>NightFallBig</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_RedChargeLance</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>300</speed>
+            <flyOverhead>true</flyOverhead>
+            <damageDef>RE_BigBakuretsu</damageDef>
+            <explosionRadius>30</explosionRadius>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <preExplosionSpawnChance>0.01</preExplosionSpawnChance>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <arcHeightFactor>0.55</arcHeightFactor>
+            <shadowSize>0.6</shadowSize>
+            <explosionDelay>0</explosionDelay>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_NightFall_Powered</defName>
+        <label>True NightFall</label>
+        <description>Bakuretsu Bakuretsu La La La~</description>
+        <techLevel>Spacer</techLevel>
+        <tradeability>Sellable</tradeability>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_NightFallPower</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <comps>
+            <li Class="CompProperties_Biocodable"/>
+            <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+                <LeechStrength>2.00</LeechStrength>
+            </li>
+            <li Class="CompProperties_BladelinkWeapon">
+                <biocodeOnEquip>true</biocodeOnEquip>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_PlasmaSword</soundInteract>
+        <generateCommonality>0.3</generateCommonality>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <WorkToMake>10000</WorkToMake>
+            <MarketValue>5000000</MarketValue>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <equippedStatOffsets>
+            <ShootingAccuracyPawn>100</ShootingAccuracyPawn>
+            <SocialImpact>3.0</SocialImpact>
+            <MoveSpeed>8</MoveSpeed>
+            <PsychicEntropyRecoveryRate>15</PsychicEntropyRecoveryRate>
+            <MeleeDodgeChance>2.5</MeleeDodgeChance>
+            <PsychicSensitivity>8</PsychicSensitivity>
+        </equippedStatOffsets>
+        <costList>
+            <RE_Gun_NightFall>1</RE_Gun_NightFall>
+            <RE_PowerCell>2000</RE_PowerCell>
+
+        </costList>
+        <recipeMaker>
+            <recipeUsers Inherit="False">
+                <li>ReviaBloodSigil</li>
+            </recipeUsers>
+            <researchPrerequisite>RE_ReviaRaceImperialLegendary</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>1</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_NightFallBig</defaultProjectile>
+                <warmupTime>5.0</warmupTime>
+                <range>299.9</range>
+                <requireLineOfSight>false</requireLineOfSight>
+                <forcedMissRadius>1.0</forcedMissRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>RE_NightFall</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>ReviaEmpireLegendary</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>0.6</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>0.8</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>0.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

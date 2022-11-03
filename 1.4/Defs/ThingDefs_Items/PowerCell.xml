@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>RE_PowerCell</defName>
+        <label>Power Cell</label>
+        <description>A Power Cell holding a deadly energy from condenced bloodstones.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <tickerType>Normal</tickerType>
+        <statBases>
+            <WorkToMake>2000</WorkToMake>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>500</MarketValue>
+            <Mass>1.0</Mass>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>1.0</DeteriorationRate>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Item/Resource/PowerCell</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.9</explosiveRadius>
+                <explosiveDamageType>RE_EnergyBomb</explosiveDamageType>
+                <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+                <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+                <wickTicks>30~60</wickTicks>
+            </li>
+        </comps>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialEquipment</researchPrerequisite>
+            <unfinishedThingDef>RE_UnfinishedPowerCell</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Steel>25</Steel>
+            <Chemfuel>25</Chemfuel>
+            <Plasteel>10</Plasteel>
+            <ReviaRaceBloodstone>5</ReviaRaceBloodstone>
+        </costList>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    </ThingDef>
+
+</Defs>

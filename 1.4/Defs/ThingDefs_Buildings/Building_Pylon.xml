@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="VFES_BuildableShieldGeneratorBase">
+        <defName>RE_Pylon</defName>
+        <label>Pylon shield generator</label>
+        <description>An ultratech device that projects a large energy field around itself to protect everything inside, but consumes a huge amount of power when active. Works through walls.\n\nShield generators only activate when there's an active threat present such as a raid or an artillery bombardment. Otherwise, they stay in an inactive state and consume much less power.</description>
+        <graphicData>
+            <texPath>Things/Buildings/Security/RE_pylon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(4, 4)</drawSize>
+            <shadowData>
+                <volume>(0.3, 0.6, 0.3)</volume>
+                <offset>(0.0, 0.0, -0.1)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0,0.75,1.0,0.5)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>2500</MaxHitPoints>
+            <Flammability>0.1</Flammability>
+            <Beauty>100</Beauty>
+            <WorkToBuild>100000</WorkToBuild>
+            <VFES_EnergyShieldEnergyMax>100.0</VFES_EnergyShieldEnergyMax>
+            <VFES_EnergyShieldRechargeRate>4.5</VFES_EnergyShieldRechargeRate>
+            <VFES_EnergyShieldRadius>39.9</VFES_EnergyShieldRadius>
+        </statBases>
+        <techLevel>Ultra</techLevel>
+        <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <researchPrerequisites>
+            <li>RE_ReviaRaceAdvancedDefense</li>
+        </researchPrerequisites>
+        <size>(4,4)</size>
+        <costList>
+            <Steel>1500</Steel>
+            <Plasteel>500</Plasteel>
+            <Gold>300</Gold>
+            <Uranium>500</Uranium>
+            <ComponentSpacer>20</ComponentSpacer>
+            <ComponentIndustrial>50</ComponentIndustrial>
+            <RE_PowerCell>80</RE_PowerCell>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>14.9</explosiveRadius>
+                <explosiveDamageType>RE_IncineratedBomb</explosiveDamageType>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>6000</basePowerConsumption>
+                <shortCircuitInRain>false</shortCircuitInRain>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Glower">
+                <glowRadius>8</glowRadius>
+                <glowColor>(191,38,38,0)</glowColor>
+            </li>
+        </comps>
+        <fillPercent>0.5</fillPercent>
+        <pathCost>150</pathCost>
+        <specialDisplayRadius>49.9</specialDisplayRadius>
+        <modExtensions>
+            <li Class="VFESecurity.ExtendedBuildingProperties">
+                <initialEnergyPercentage>0.5</initialEnergyPercentage>
+                <rechargeTicksWhenDepleted>250</rechargeTicksWhenDepleted>
+                <shortCircuitChancePerEnergyLost>0.01</shortCircuitChancePerEnergyLost>
+                <inactivePowerConsumption>1000</inactivePowerConsumption>
+                <shieldColour>(0.84,0.07,0.07, 0.7)</shieldColour>
+            </li>
+        </modExtensions>
+    </ThingDef>
+</Defs>

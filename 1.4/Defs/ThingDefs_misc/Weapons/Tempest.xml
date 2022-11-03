@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Breacher -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_Tempest</defName>
+        <label>Tempest charge</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_EnergyBombCannon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>80</speed>
+            <damageDef>EMP</damageDef>
+            <!-- Use default damage from explosion def -->
+            <explosionRadius>3</explosionRadius>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <shadowSize>0.6</shadowSize>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_Tempest</defName>
+        <label>Tempest</label>
+        <description>An Charged Heavy weapon with an stable core and chamber powered with electric charge , ready to be released anytime.</description>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_Tempest</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.3</drawSize>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <generateCommonality>0.3</generateCommonality>
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>2.0</Mass>
+            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <Plasteel>125</Plasteel>
+            <ComponentSpacer>16</ComponentSpacer>
+            <ComponentIndustrial>25</ComponentIndustrial>
+            <Uranium>80</Uranium>
+            <Gold>120</Gold>
+            <RE_PowerCell>30</RE_PowerCell>
+        </costList>
+        <recipeMaker>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <researchPrerequisite>RE_ReviaRaceImperialAdvanced</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_Tempest</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>34.9</range>
+                <forcedMissRadius>1.0</forcedMissRadius>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>ReviaEmpireHeavy</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

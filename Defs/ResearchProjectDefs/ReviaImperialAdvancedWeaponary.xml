@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RE_ReviaRaceImperialAdvanced</defName>
+    <label>Imperial Revia Advanced Equipment</label>
+    <description>Create Weapons and items after extended testing and adjustment,  to laid waste to everything.</description>
+    <baseCost>15000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>ReviaRaceResearchTab</tab>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>RE_ReviaRaceImperialWeaponary</li>
+    </prerequisites>
+    <researchViewX>8.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+</Defs>

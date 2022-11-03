@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_Melter</defName>
+        <label>Melter shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_Red_Bullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <stoppingPower>0.8</stoppingPower>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_Melter</defName>
+        <label>Melter</label>
+        <description>a powereful rifle , after the development of the blaster and using the energy charged , and compress it and release it deal a great armor damage yet have lower damage.</description>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_melter</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.0</drawSize>
+        </graphicData>
+        <uiIconScale>1.0</uiIconScale>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+            <Mass>2.0</Mass>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.45</AccuracyLong>
+            <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialWeaponary</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <ComponentSpacer>2</ComponentSpacer>
+            <ComponentIndustrial>10</ComponentIndustrial>
+            <Gold>10</Gold>
+            <RE_PowerCell>12</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireCommon</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_Melter</defaultProjectile>
+                <warmupTime>2.0</warmupTime>
+                <range>42.0</range>
+                <burstShotCount>5</burstShotCount>
+                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                <soundCast>VWE_Shot_ChargeMinigun</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

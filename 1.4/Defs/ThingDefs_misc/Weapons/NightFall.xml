@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Breacher -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_NightFall</defName>
+        <label>NightFallSmall</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_Charge_Big_Bullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <speed>80</speed>
+            <flyOverhead>true</flyOverhead>
+            <damageDef>RE_IncineratedBomb</damageDef>
+            <explosionRadius>5</explosionRadius>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <arcHeightFactor>0.55</arcHeightFactor>
+            <shadowSize>0.6</shadowSize>
+            <explosionDelay>0</explosionDelay>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_NightFall</defName>
+        <label>NightFall</label>
+        <description>A powerful staff, the core is hovering in the circle , it seems cant move , yet seems very unstable what could it become?</description>
+        <techLevel>Spacer</techLevel>
+        <tradeability>Sellable</tradeability>
+        <relicChance>3</relicChance>
+        <thingSetMakerTags Inherit="False">
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_NightFall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <comps>
+            <li Class="CompProperties_Biocodable"/>
+            <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+                <LeechStrength>2.00</LeechStrength>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_PlasmaSword</soundInteract>
+        <generateCommonality>0.3</generateCommonality>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+            <WorkToMake>1000000</WorkToMake>
+            <MarketValue>500000</MarketValue>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+            <Flammability>0</Flammability>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+        <equippedStatOffsets>
+            <SocialImpact>1.0</SocialImpact>
+            <PsychicEntropyRecoveryRate>5</PsychicEntropyRecoveryRate>
+            <PsychicSensitivity>4.5</PsychicSensitivity>
+        </equippedStatOffsets>
+        <costList>
+            <Plasteel>75</Plasteel>
+            <ComponentSpacer>25</ComponentSpacer>
+            <ComponentIndustrial>50</ComponentIndustrial>
+            <Uranium>300</Uranium>
+            <Gold>500</Gold>
+            <RE_PowerCell>500</RE_PowerCell>
+        </costList>
+        <recipeMaker>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <researchPrerequisite>RE_ReviaRaceImperialLegendary</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_NightFall</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>99.9</range>
+                <requireLineOfSight>false</requireLineOfSight>
+                <forcedMissRadius>1.0</forcedMissRadius>
+                <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>RE_NightFall</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>ReviaEmpireLegendary</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>0.6</cooldownTime>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>0.8</cooldownTime>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>0.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

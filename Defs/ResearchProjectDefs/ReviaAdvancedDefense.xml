@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RE_ReviaRaceAdvancedDefense</defName>
+    <label>Revia advanced defense</label>
+    <description>Create ultratech Defenses from the empire of revia</description>
+    <baseCost>50000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>ReviaRaceResearchTab</tab>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <prerequisites>
+      <li>RE_ReviaRaceImperialWeaponary</li>
+    </prerequisites>
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+</Defs>

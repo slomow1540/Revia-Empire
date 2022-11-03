@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Accelerator -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>RE_Bullet_Accelerator</defName>
+        <label>Accelerator</label>
+        <graphicData>
+            <texPath>Things/Projectile/RE_RedChargeLance</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>15</damageAmountBase>
+            <armorPenetrationBase>0.25</armorPenetrationBase>
+            <speed>60</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RE_Gun_Accelerator</defName>
+        <label>Accelerator</label>
+        <description>A Accelerator.the charged energy greatly increases the damage done.\n\nCapable of covering the entire area in volley of anti-armor rounds, this Accelerator is often used by Revia veterans during their infamous raids.</description>
+        <techLevel>Spacer</techLevel>
+        <graphicData>
+            <texPath>Things/WeaponRanged/RE_Accelerator</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.22</drawSize>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+            <Mass>4</Mass>
+            <AccuracyTouch>0.50</AccuracyTouch>
+            <AccuracyShort>0.60</AccuracyShort>
+            <AccuracyMedium>0.70</AccuracyMedium>
+            <AccuracyLong>0.30</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>RE_ReviaRaceImperialAdvanced</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <costList>
+            <Plasteel>150</Plasteel>
+            <ComponentSpacer>12</ComponentSpacer>
+            <ComponentIndustrial>20</ComponentIndustrial>
+            <Uranium>60</Uranium>
+            <Gold>40</Gold>
+            <RE_PowerCell>25</RE_PowerCell>
+        </costList>
+        <weaponTags>
+            <li>ReviaEmpireHeavy</li>
+            <li>ReviaEmpirespartaMain</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RE_Bullet_Accelerator</defaultProjectile>
+                <warmupTime>2.2</warmupTime>
+                <minRange>1.5</minRange>
+                <range>34.9</range>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <burstShotCount>20</burstShotCount>
+                <soundCast>RE_AcceleratorShot</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

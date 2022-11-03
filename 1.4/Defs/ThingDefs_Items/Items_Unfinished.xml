@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="UnfinishedBase">
+        <defName>RE_UnfinishedPowerCell</defName>
+        <label>unfinished Power Cell</label>
+        <description>An unfinished Power Cell</description>
+        <statBases>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Item/Unfinished/PowerCell_Unfinished</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <stuffCategories Inherit="false" />
+    </ThingDef>
+
+
+</Defs>
