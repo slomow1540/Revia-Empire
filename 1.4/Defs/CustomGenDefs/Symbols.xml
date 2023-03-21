@@ -169,6 +169,30 @@
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
+        <defName>RE_Turret_Railgun_Cannon_Plasteel_North</defName>
+        <thing>RE_Turret_Railgun_Cannon</thing>
+        <stuff>Plasteel</stuff>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>RE_Turret_Railgun_Cannon_Gold_North</defName>
+        <thing>RE_Turret_Railgun_Cannon</thing>
+        <stuff>Gold</stuff>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>RE_Turret_Railgun_Cannon_Uranium_North</defName>
+        <thing>RE_Turret_Railgun_Cannon</thing>
+        <stuff>Uranium</stuff>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>RE_Turret_Railgun_Cannon_Silver_North</defName>
+        <thing>RE_Turret_Railgun_Cannon</thing>
+        <stuff>Silver</stuff>
+    </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
         <defName>RE_Turret_Railgun_Uranium_North</defName>
         <thing>RE_Turret_Railgun</thing>
         <stuff>Uranium</stuff>
