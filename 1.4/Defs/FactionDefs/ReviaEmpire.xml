@@ -204,6 +204,8 @@
     <!--    need fix , idk why but custom settlement generation seems not to work for now -->
     <modExtensions>
       <li Class="KCSG.CustomGenOption">
+        <preventBridgeable>true</preventBridgeable>
+        <tryFindFreeArea>True</tryFindFreeArea>
         <chooseFromlayouts>
           <li>RE_SmallResort_1</li>
           <li>RE_SmallMining_2</li>
@@ -214,6 +216,8 @@
           <li>RE_LargeSettlement_1</li>
           <li>RE_LargeSpStructure_2</li>
           <li>RE_Fort</li>
+          <li>RE_fort_3</li>
+          <li>RE_StarFort</li>
         </chooseFromlayouts>
       </li>
     </modExtensions>

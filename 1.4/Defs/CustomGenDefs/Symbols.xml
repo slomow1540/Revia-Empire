@@ -5,42 +5,58 @@
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceScout</defName>
         <pawnKindDef>RE_ReviaRaceScout</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceLaborer</defName>
         <pawnKindDef>RE_ReviaRaceLaborer</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceMerchant</defName>
         <pawnKindDef>RE_ReviaRaceMerchant</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRacePrivate</defName>
         <pawnKindDef>RE_ReviaRacePrivate</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceMistress</defName>
         <pawnKindDef>RE_ReviaRaceMistress</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceRusher</defName>
         <pawnKindDef>RE_ReviaRaceRusher</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceOverseer</defName>
         <pawnKindDef>RE_ReviaRaceOverseer</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
 
     <KCSG.SymbolDef>
         <defName>RE_ReviaRaceVeteran</defName>
         <pawnKindDef>RE_ReviaRaceVeteran</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
     </KCSG.SymbolDef>
+
+    <KCSG.SymbolDef>
+        <defName>RE_ReviaRaceCommander</defName>
+        <pawnKindDef>RE_ReviaRaceCommander</pawnKindDef>
+        <defendSpawnPoint>true</defendSpawnPoint>
+    </KCSG.SymbolDef>
+
+
 
     <!-- end of pawns and start of techprint-->
 
